@@ -1,0 +1,215 @@
+
+html {
+  scroll-behavior: smooth;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000000;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+/*Sticky Navigation Bar*/
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.sticky-navbar .logo {
+  color: rgb(255, 72, 72);
+  font-weight: bold;
+  font-size: 20px;
+}
+.sticky-navbar nav a {
+  margin-left: 20px;
+  color: rgb(255, 72, 72);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.sticky-navbar nav a:hover {
+  color: #000000;
+}
+/* Parallax Background Sections */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #000;
+}
+.parallax1 {
+  background-image: url('assets/indexparallax.jpg');
+}
+.parallax2 {
+  background-image: url('assets/indexparallax2.jpg');
+}
+.parallax-before-about {
+  background-image: url('assets/parallaxtop.jpg');
+}
+.parallax-about-activities {
+  background-image: url('assets/parallaxmid.jpg');
+}
+.parallax-mid {
+  background-image: url('assets/parallaxlowmid.jpg');
+}
+.parallax-before-contact {
+  background-image: url('assets/parallaxlow.jpg');
+}
+.parallax .text {
+  position: relative;
+  z-index: 3;
+}
+/* Home Page Card Layout */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+}
+.card {
+  background: white;
+  color: black;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 20px;
+}
+.card-content h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+.card-content p {
+  font-size: 1em;
+  color: #444;
+  margin-bottom: 20px;
+}
+/*  Buttons */
+.btn {
+  display: inline-block;
+  background: none;
+  border: 2px solid black;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+/* Intro / About Me Section */
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+}
+.intro-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.intro-text {
+  max-width: 600px;
+}
+.intro-text h2 {
+  font-size: 20px;
+  color: #AAAAAA;
+  margin-bottom: 15px;
+}
+.intro-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.intro-text .highlight-name {
+  color: orange;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* Activities & Certificate Sections */
+#activities img,
+#certificate img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+#activities p,
+#certificate p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+  max-width: 800px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+/*  Section Layout  */
+section {
+  padding: 100px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+/* Responsive Design (Mobile) */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+  .sticky-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  .sticky-navbar nav a {
+    display: inline-block;
+    margin: 10px;
+  }
+  .parallax {
+    background-attachment: scroll; 
+  }
+}
